@@ -983,10 +983,10 @@ namespace DataLibrary {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DIC_COUNTRYRow AddDIC_COUNTRYRow(string DC_NAME) {
+            public DIC_COUNTRYRow AddDIC_COUNTRYRow(int DC_ID, string DC_NAME) {
                 DIC_COUNTRYRow rowDIC_COUNTRYRow = ((DIC_COUNTRYRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        DC_ID,
                         DC_NAME};
                 rowDIC_COUNTRYRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDIC_COUNTRYRow);
@@ -1030,11 +1030,7 @@ namespace DataLibrary {
                 base.Columns.Add(this.columnDC_NAME);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnDC_ID}, true));
-                this.columnDC_ID.AutoIncrement = true;
-                this.columnDC_ID.AutoIncrementSeed = -1;
-                this.columnDC_ID.AutoIncrementStep = -1;
                 this.columnDC_ID.AllowDBNull = false;
-                this.columnDC_ID.ReadOnly = true;
                 this.columnDC_ID.Unique = true;
                 this.columnDC_NAME.AllowDBNull = false;
                 this.columnDC_NAME.MaxLength = 100;
@@ -4221,7 +4217,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4519,27 +4515,28 @@ namespace DataLibrary.VBDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DC_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DIC_COUNTRY] ([DC_NAME]) VALUES (@DC_NAME);\r\nSELECT DC_ID, DC_" +
-                "NAME FROM DIC_COUNTRY WHERE (DC_ID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DIC_COUNTRY] ([DC_ID], [DC_NAME]) VALUES (@DC_ID, @DC_NAME);\r\n" +
+                "SELECT DC_ID, DC_NAME FROM DIC_COUNTRY WHERE (DC_ID = @DC_ID)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DC_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DC_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[DIC_COUNTRY] SET [DC_NAME] = @DC_NAME WHERE (([DC_ID] = @Original_D" +
-                "C_ID) AND ([DC_NAME] = @Original_DC_NAME));\r\nSELECT DC_ID, DC_NAME FROM DIC_COUN" +
-                "TRY WHERE (DC_ID = @DC_ID)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[DIC_COUNTRY] SET [DC_ID] = @DC_ID, [DC_NAME] = @DC_NAME WHERE (([DC" +
+                "_ID] = @Original_DC_ID) AND ([DC_NAME] = @Original_DC_NAME));\r\nSELECT DC_ID, DC_" +
+                "NAME FROM DIC_COUNTRY WHERE (DC_ID = @DC_ID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DC_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DC_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DC_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DC_NAME", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DC_NAME", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DC_ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "DC_ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4637,12 +4634,13 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string DC_NAME) {
+        public virtual int Insert(int DC_ID, string DC_NAME) {
+            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(DC_ID));
             if ((DC_NAME == null)) {
                 throw new global::System.ArgumentNullException("DC_NAME");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(DC_NAME));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DC_NAME));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4664,21 +4662,21 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string DC_NAME, int Original_DC_ID, string Original_DC_NAME, int DC_ID) {
+        public virtual int Update(int DC_ID, string DC_NAME, int Original_DC_ID, string Original_DC_NAME) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(DC_ID));
             if ((DC_NAME == null)) {
                 throw new global::System.ArgumentNullException("DC_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(DC_NAME));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DC_NAME));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_DC_ID));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_DC_ID));
             if ((Original_DC_NAME == null)) {
                 throw new global::System.ArgumentNullException("Original_DC_NAME");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_DC_NAME));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_DC_NAME));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(DC_ID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4700,7 +4698,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string DC_NAME, int Original_DC_ID, string Original_DC_NAME) {
-            return this.Update(DC_NAME, Original_DC_ID, Original_DC_NAME, Original_DC_ID);
+            return this.Update(Original_DC_ID, DC_NAME, Original_DC_ID, Original_DC_NAME);
         }
     }
     
@@ -4857,7 +4855,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5175,7 +5173,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5514,7 +5512,7 @@ SELECT FM_ID, FM_TITLE, FM_YEAR, FM_LENGTH, FM_ANOT, FM_IMDB_RATE, FM_KP_RATE FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5862,7 +5860,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6163,7 +6161,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6464,7 +6462,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6765,7 +6763,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
+            this._connection.ConnectionString = "";
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
