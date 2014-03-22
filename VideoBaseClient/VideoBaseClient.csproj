@@ -67,6 +67,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VideoBaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,18 +84,6 @@
     <EmbeddedResource Include="VBView.resx">
       <DependentUpon>VBView.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSet.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.DIC_CHARACTERTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.DIC_COUNTRYTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.DIC_DIRECTORTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.DIC_GENRETableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.FILMTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.FILM_DIC_CHARACTERTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.FILM_DIC_COUNTRYTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.FILM_DIC_DIRETORTableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.FILM_DIC_GENRETableAdapter.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
-    <None Include="Properties\DataSources\DataLibrary.VideoBaseDataSetTableAdapters.TableAdapterManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -100,15 +93,20 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="VideoBaseDataSet.xsc">
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="VideoBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>VideoBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="VideoBaseDataSet.xss">
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DataLibrary\DataLibrary.csproj">
-      <Project>{c3c8ee5b-d125-4d2d-873b-98c2140fb4d3}</Project>
-      <Name>DataLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -126,6 +124,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

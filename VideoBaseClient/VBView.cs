@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLibrary.VideoBaseDataSetTableAdapters;
 
 namespace VideoBaseClient
 {
@@ -20,7 +19,11 @@ namespace VideoBaseClient
 
         private void toolsSaveButton_Click(object sender, EventArgs e)
         {
-            
+            fILMTableAdapter.Update(videoBaseDataSet.FILM);
+            dIC_GENRETableAdapter.Update(videoBaseDataSet.DIC_GENRE);
+            dIC_COUNTRYTableAdapter.Update(videoBaseDataSet.DIC_COUNTRY);
+            dIC_CHARACTERTableAdapter.Update(videoBaseDataSet.DIC_CHARACTER);
+            dIC_DIRECTORTableAdapter.Update(videoBaseDataSet.DIC_DIRECTOR);
         }
 
         private void VBView_Load(object sender, EventArgs e)
