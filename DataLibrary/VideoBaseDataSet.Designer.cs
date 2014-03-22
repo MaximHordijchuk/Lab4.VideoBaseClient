@@ -20,9 +20,9 @@ namespace DataLibrary {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("VBDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("VideoBaseDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class VBDataSet : global::System.Data.DataSet {
+    public partial class VideoBaseDataSet : global::System.Data.DataSet {
         
         private DIC_CHARACTERDataTable tableDIC_CHARACTER;
         
@@ -62,7 +62,7 @@ namespace DataLibrary {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public VBDataSet() {
+        public VideoBaseDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -73,7 +73,7 @@ namespace DataLibrary {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected VBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected VideoBaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -263,7 +263,7 @@ namespace DataLibrary {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            VBDataSet cln = ((VBDataSet)(base.Clone()));
+            VideoBaseDataSet cln = ((VideoBaseDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -415,9 +415,9 @@ namespace DataLibrary {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "VBDataSet";
+            this.DataSetName = "VideoBaseDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/VBDataSet.xsd";
+            this.Namespace = "http://tempuri.org/VideoBaseDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDIC_CHARACTER = new DIC_CHARACTERDataTable();
@@ -537,7 +537,7 @@ namespace DataLibrary {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            VBDataSet ds = new VBDataSet();
+            VideoBaseDataSet ds = new VideoBaseDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -827,7 +827,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1101,7 +1101,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1379,7 +1379,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1657,7 +1657,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2011,7 +2011,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2291,7 +2291,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2571,7 +2571,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2851,7 +2851,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3131,7 +3131,7 @@ namespace DataLibrary {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                VBDataSet ds = new VBDataSet();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -4061,7 +4061,7 @@ namespace DataLibrary {
         }
     }
 }
-namespace DataLibrary.VBDataSetTableAdapters {
+namespace DataLibrary.VideoBaseDataSetTableAdapters {
     
     
     /// <summary>
@@ -4217,7 +4217,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4234,7 +4234,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.DIC_CHARACTERDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.DIC_CHARACTERDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4247,9 +4247,9 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.DIC_CHARACTERDataTable GetData() {
+        public virtual VideoBaseDataSet.DIC_CHARACTERDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.DIC_CHARACTERDataTable dataTable = new VBDataSet.DIC_CHARACTERDataTable();
+            VideoBaseDataSet.DIC_CHARACTERDataTable dataTable = new VideoBaseDataSet.DIC_CHARACTERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4257,14 +4257,14 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.DIC_CHARACTERDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.DIC_CHARACTERDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "DIC_CHARACTER");
         }
         
@@ -4536,7 +4536,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4553,7 +4553,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.DIC_COUNTRYDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.DIC_COUNTRYDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4566,9 +4566,9 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.DIC_COUNTRYDataTable GetData() {
+        public virtual VideoBaseDataSet.DIC_COUNTRYDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.DIC_COUNTRYDataTable dataTable = new VBDataSet.DIC_COUNTRYDataTable();
+            VideoBaseDataSet.DIC_COUNTRYDataTable dataTable = new VideoBaseDataSet.DIC_COUNTRYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4576,14 +4576,14 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.DIC_COUNTRYDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.DIC_COUNTRYDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "DIC_COUNTRY");
         }
         
@@ -4855,7 +4855,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4872,7 +4872,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.DIC_DIRECTORDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.DIC_DIRECTORDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4885,9 +4885,9 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.DIC_DIRECTORDataTable GetData() {
+        public virtual VideoBaseDataSet.DIC_DIRECTORDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.DIC_DIRECTORDataTable dataTable = new VBDataSet.DIC_DIRECTORDataTable();
+            VideoBaseDataSet.DIC_DIRECTORDataTable dataTable = new VideoBaseDataSet.DIC_DIRECTORDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4895,14 +4895,14 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.DIC_DIRECTORDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.DIC_DIRECTORDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "DIC_DIRECTOR");
         }
         
@@ -5173,7 +5173,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5190,7 +5190,7 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.DIC_GENREDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.DIC_GENREDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5203,9 +5203,9 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.DIC_GENREDataTable GetData() {
+        public virtual VideoBaseDataSet.DIC_GENREDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.DIC_GENREDataTable dataTable = new VBDataSet.DIC_GENREDataTable();
+            VideoBaseDataSet.DIC_GENREDataTable dataTable = new VideoBaseDataSet.DIC_GENREDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5213,14 +5213,14 @@ namespace DataLibrary.VBDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.DIC_GENREDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.DIC_GENREDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "DIC_GENRE");
         }
         
@@ -5512,7 +5512,7 @@ SELECT FM_ID, FM_TITLE, FM_YEAR, FM_LENGTH, FM_ANOT, FM_IMDB_RATE, FM_KP_RATE FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5530,7 +5530,7 @@ SELECT FM_ID, FM_TITLE, FM_YEAR, FM_LENGTH, FM_ANOT, FM_IMDB_RATE, FM_KP_RATE FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.FILMDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.FILMDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5543,9 +5543,9 @@ SELECT FM_ID, FM_TITLE, FM_YEAR, FM_LENGTH, FM_ANOT, FM_IMDB_RATE, FM_KP_RATE FR
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.FILMDataTable GetData() {
+        public virtual VideoBaseDataSet.FILMDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.FILMDataTable dataTable = new VBDataSet.FILMDataTable();
+            VideoBaseDataSet.FILMDataTable dataTable = new VideoBaseDataSet.FILMDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5553,14 +5553,14 @@ SELECT FM_ID, FM_TITLE, FM_YEAR, FM_LENGTH, FM_ANOT, FM_IMDB_RATE, FM_KP_RATE FR
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.FILMDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.FILMDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FILM");
         }
         
@@ -5860,7 +5860,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5877,7 +5877,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.FILM_DIC_CHARACTERDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.FILM_DIC_CHARACTERDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5890,9 +5890,9 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.FILM_DIC_CHARACTERDataTable GetData() {
+        public virtual VideoBaseDataSet.FILM_DIC_CHARACTERDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.FILM_DIC_CHARACTERDataTable dataTable = new VBDataSet.FILM_DIC_CHARACTERDataTable();
+            VideoBaseDataSet.FILM_DIC_CHARACTERDataTable dataTable = new VideoBaseDataSet.FILM_DIC_CHARACTERDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5900,14 +5900,14 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.FILM_DIC_CHARACTERDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.FILM_DIC_CHARACTERDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FILM_DIC_CHARACTER");
         }
         
@@ -6161,7 +6161,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6178,7 +6178,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.FILM_DIC_COUNTRYDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.FILM_DIC_COUNTRYDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6191,9 +6191,9 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.FILM_DIC_COUNTRYDataTable GetData() {
+        public virtual VideoBaseDataSet.FILM_DIC_COUNTRYDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.FILM_DIC_COUNTRYDataTable dataTable = new VBDataSet.FILM_DIC_COUNTRYDataTable();
+            VideoBaseDataSet.FILM_DIC_COUNTRYDataTable dataTable = new VideoBaseDataSet.FILM_DIC_COUNTRYDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6201,14 +6201,14 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.FILM_DIC_COUNTRYDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.FILM_DIC_COUNTRYDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FILM_DIC_COUNTRY");
         }
         
@@ -6462,7 +6462,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6479,7 +6479,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.FILM_DIC_DIRETORDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.FILM_DIC_DIRETORDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6492,9 +6492,9 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.FILM_DIC_DIRETORDataTable GetData() {
+        public virtual VideoBaseDataSet.FILM_DIC_DIRETORDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.FILM_DIC_DIRETORDataTable dataTable = new VBDataSet.FILM_DIC_DIRETORDataTable();
+            VideoBaseDataSet.FILM_DIC_DIRETORDataTable dataTable = new VideoBaseDataSet.FILM_DIC_DIRETORDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6502,14 +6502,14 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.FILM_DIC_DIRETORDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.FILM_DIC_DIRETORDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FILM_DIC_DIRETOR");
         }
         
@@ -6763,7 +6763,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = "";
+            this._connection.ConnectionString = global::DataLibrary.Properties.Settings.Default.VideoBaseConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6780,7 +6780,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VBDataSet.FILM_DIC_GENREDataTable dataTable) {
+        public virtual int Fill(VideoBaseDataSet.FILM_DIC_GENREDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6793,9 +6793,9 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VBDataSet.FILM_DIC_GENREDataTable GetData() {
+        public virtual VideoBaseDataSet.FILM_DIC_GENREDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            VBDataSet.FILM_DIC_GENREDataTable dataTable = new VBDataSet.FILM_DIC_GENREDataTable();
+            VideoBaseDataSet.FILM_DIC_GENREDataTable dataTable = new VideoBaseDataSet.FILM_DIC_GENREDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6803,14 +6803,14 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet.FILM_DIC_GENREDataTable dataTable) {
+        public virtual int Update(VideoBaseDataSet.FILM_DIC_GENREDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(VBDataSet dataSet) {
+        public virtual int Update(VideoBaseDataSet dataSet) {
             return this.Adapter.Update(dataSet, "FILM_DIC_GENRE");
         }
         
@@ -7184,7 +7184,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(VBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(VideoBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dIC_CHARACTERTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DIC_CHARACTER.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -7275,7 +7275,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(VBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(VideoBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dIC_CHARACTERTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DIC_CHARACTER.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -7357,7 +7357,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(VBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(VideoBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._fILM_DIC_GENRETableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.FILM_DIC_GENRE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -7463,7 +7463,7 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(VBDataSet dataSet) {
+        public virtual int UpdateAll(VideoBaseDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

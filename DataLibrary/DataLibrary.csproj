@@ -39,17 +39,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="VBDataSet.Designer.cs">
+    <Compile Include="VideoBaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>VBDataSet.xsd</DependentUpon>
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -57,16 +56,16 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="VBDataSet.xsc">
-      <DependentUpon>VBDataSet.xsd</DependentUpon>
+    <None Include="VideoBaseDataSet.xsc">
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
     </None>
-    <None Include="VBDataSet.xsd">
-      <SubType>Designer</SubType>
+    <None Include="VideoBaseDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>VBDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>VideoBaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
-    <None Include="VBDataSet.xss">
-      <DependentUpon>VBDataSet.xsd</DependentUpon>
+    <None Include="VideoBaseDataSet.xss">
+      <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
