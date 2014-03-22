@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>18f6cc2c-b80c-43af-a98d-5d612a7c75b4</ProjectGuid>
+    <ProjectGuid>{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>VideoBaseClient</RootNamespace>

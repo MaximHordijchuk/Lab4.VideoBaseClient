@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab4.VideoBaseClient", "Lab4.VideoBaseClient\Lab4.VideoBaseClient.csproj", "{DFF781FC-FE6E-4DD0-AF9F-6F53615E9DB2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLibrary", "DataLibrary\DataLibrary.csproj", "{C3C8EE5B-D125-4D2D-873B-98C2140FB4D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoBaseClient", "VideoBaseClient\VideoBaseClient.csproj", "{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +11,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DFF781FC-FE6E-4DD0-AF9F-6F53615E9DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFF781FC-FE6E-4DD0-AF9F-6F53615E9DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFF781FC-FE6E-4DD0-AF9F-6F53615E9DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFF781FC-FE6E-4DD0-AF9F-6F53615E9DB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C8EE5B-D125-4D2D-873B-98C2140FB4D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C8EE5B-D125-4D2D-873B-98C2140FB4D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C8EE5B-D125-4D2D-873B-98C2140FB4D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C8EE5B-D125-4D2D-873B-98C2140FB4D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCAA2738-497B-4645-AE79-CA6B1D06B8C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
