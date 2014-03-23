@@ -59,6 +59,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilmsView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsView.Designer.cs">
+      <DependentUpon>FilmsView.cs</DependentUpon>
+    </Compile>
     <Compile Include="VBView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>VideoBaseDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FilmsView.resx">
+      <DependentUpon>FilmsView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
