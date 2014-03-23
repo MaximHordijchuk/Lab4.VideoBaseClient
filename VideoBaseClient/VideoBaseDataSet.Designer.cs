@@ -44,6 +44,8 @@ namespace VideoBaseClient {
         
         private DTFilmsOfGenreDataTable tableDTFilmsOfGenre;
         
+        private DTCharactersOfFilmDataTable tableDTCharactersOfFilm;
+        
         private global::System.Data.DataRelation relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER;
         
         private global::System.Data.DataRelation relationFK_FILM_DIC_CHARACTER_FILM;
@@ -59,6 +61,8 @@ namespace VideoBaseClient {
         private global::System.Data.DataRelation relationFK_FILM_DIC_GENRE_DIC_GENRE;
         
         private global::System.Data.DataRelation relationFK_FILM_DIC_GENRE_FILM;
+        
+        private global::System.Data.DataRelation relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -117,6 +121,9 @@ namespace VideoBaseClient {
                 }
                 if ((ds.Tables["DTFilmsOfGenre"] != null)) {
                     base.Tables.Add(new DTFilmsOfGenreDataTable(ds.Tables["DTFilmsOfGenre"]));
+                }
+                if ((ds.Tables["DTCharactersOfFilm"] != null)) {
+                    base.Tables.Add(new DTCharactersOfFilmDataTable(ds.Tables["DTCharactersOfFilm"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -238,6 +245,16 @@ namespace VideoBaseClient {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public DTCharactersOfFilmDataTable DTCharactersOfFilm {
+            get {
+                return this.tableDTCharactersOfFilm;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -333,6 +350,9 @@ namespace VideoBaseClient {
                 if ((ds.Tables["DTFilmsOfGenre"] != null)) {
                     base.Tables.Add(new DTFilmsOfGenreDataTable(ds.Tables["DTFilmsOfGenre"]));
                 }
+                if ((ds.Tables["DTCharactersOfFilm"] != null)) {
+                    base.Tables.Add(new DTCharactersOfFilmDataTable(ds.Tables["DTCharactersOfFilm"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -426,6 +446,12 @@ namespace VideoBaseClient {
                     this.tableDTFilmsOfGenre.InitVars();
                 }
             }
+            this.tableDTCharactersOfFilm = ((DTCharactersOfFilmDataTable)(base.Tables["DTCharactersOfFilm"]));
+            if ((initTable == true)) {
+                if ((this.tableDTCharactersOfFilm != null)) {
+                    this.tableDTCharactersOfFilm.InitVars();
+                }
+            }
             this.relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER = this.Relations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER"];
             this.relationFK_FILM_DIC_CHARACTER_FILM = this.Relations["FK_FILM_DIC_CHARACTER_FILM"];
             this.relationFK_FILM_DIC_COUNTRY_DIC_COUNTRY = this.Relations["FK_FILM_DIC_COUNTRY_DIC_COUNTRY"];
@@ -434,6 +460,7 @@ namespace VideoBaseClient {
             this.relationFK_FILM_DIC_DIRETOR_FILM = this.Relations["FK_FILM_DIC_DIRETOR_FILM"];
             this.relationFK_FILM_DIC_GENRE_DIC_GENRE = this.Relations["FK_FILM_DIC_GENRE_DIC_GENRE"];
             this.relationFK_FILM_DIC_GENRE_FILM = this.Relations["FK_FILM_DIC_GENRE_FILM"];
+            this.relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER1 = this.Relations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -464,6 +491,8 @@ namespace VideoBaseClient {
             base.Tables.Add(this.tableFILM_DIC_GENRE);
             this.tableDTFilmsOfGenre = new DTFilmsOfGenreDataTable();
             base.Tables.Add(this.tableDTFilmsOfGenre);
+            this.tableDTCharactersOfFilm = new DTCharactersOfFilmDataTable();
+            base.Tables.Add(this.tableDTCharactersOfFilm);
             this.relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER = new global::System.Data.DataRelation("FK_FILM_DIC_CHARACTER_DIC_CHARACTER", new global::System.Data.DataColumn[] {
                         this.tableDIC_CHARACTER.DCR_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFILM_DIC_CHARACTER.FDCR_DCRColumn}, false);
@@ -496,6 +525,10 @@ namespace VideoBaseClient {
                         this.tableFILM.FM_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFILM_DIC_GENRE.FDG_FMColumn}, false);
             this.Relations.Add(this.relationFK_FILM_DIC_GENRE_FILM);
+            this.relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER1 = new global::System.Data.DataRelation("FK_FILM_DIC_CHARACTER_DIC_CHARACTER1", new global::System.Data.DataColumn[] {
+                        this.tableDTCharactersOfFilm.DCR_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFILM_DIC_CHARACTER.FDCR_DCRColumn}, false);
+            this.Relations.Add(this.relationFK_FILM_DIC_CHARACTER_DIC_CHARACTER1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -555,6 +588,12 @@ namespace VideoBaseClient {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private bool ShouldSerializeDTFilmsOfGenre() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private bool ShouldSerializeDTCharactersOfFilm() {
             return false;
         }
         
@@ -642,6 +681,9 @@ namespace VideoBaseClient {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public delegate void DTFilmsOfGenreRowChangeEventHandler(object sender, DTFilmsOfGenreRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public delegate void DTCharactersOfFilmRowChangeEventHandler(object sender, DTCharactersOfFilmRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -3557,6 +3599,284 @@ namespace VideoBaseClient {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class DTCharactersOfFilmDataTable : global::System.Data.TypedTableBase<DTCharactersOfFilmRow> {
+            
+            private global::System.Data.DataColumn columnDCR_NAME;
+            
+            private global::System.Data.DataColumn columnDCR_ID;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmDataTable() {
+                this.TableName = "DTCharactersOfFilm";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DTCharactersOfFilmDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected DTCharactersOfFilmDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DCR_NAMEColumn {
+                get {
+                    return this.columnDCR_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DCR_IDColumn {
+                get {
+                    return this.columnDCR_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow this[int index] {
+                get {
+                    return ((DTCharactersOfFilmRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DTCharactersOfFilmRowChangeEventHandler DTCharactersOfFilmRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DTCharactersOfFilmRowChangeEventHandler DTCharactersOfFilmRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DTCharactersOfFilmRowChangeEventHandler DTCharactersOfFilmRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event DTCharactersOfFilmRowChangeEventHandler DTCharactersOfFilmRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddDTCharactersOfFilmRow(DTCharactersOfFilmRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow AddDTCharactersOfFilmRow(string DCR_NAME) {
+                DTCharactersOfFilmRow rowDTCharactersOfFilmRow = ((DTCharactersOfFilmRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        DCR_NAME,
+                        null};
+                rowDTCharactersOfFilmRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDTCharactersOfFilmRow);
+                return rowDTCharactersOfFilmRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow FindByDCR_ID(int DCR_ID) {
+                return ((DTCharactersOfFilmRow)(this.Rows.Find(new object[] {
+                            DCR_ID})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                DTCharactersOfFilmDataTable cln = ((DTCharactersOfFilmDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new DTCharactersOfFilmDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnDCR_NAME = base.Columns["DCR_NAME"];
+                this.columnDCR_ID = base.Columns["DCR_ID"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnDCR_NAME = new global::System.Data.DataColumn("DCR_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDCR_NAME);
+                this.columnDCR_ID = new global::System.Data.DataColumn("DCR_ID", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDCR_ID);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnDCR_ID}, true));
+                this.columnDCR_NAME.AllowDBNull = false;
+                this.columnDCR_NAME.MaxLength = 100;
+                this.columnDCR_ID.AutoIncrement = true;
+                this.columnDCR_ID.AutoIncrementSeed = -1;
+                this.columnDCR_ID.AutoIncrementStep = -1;
+                this.columnDCR_ID.AllowDBNull = false;
+                this.columnDCR_ID.ReadOnly = true;
+                this.columnDCR_ID.Unique = true;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow NewDTCharactersOfFilmRow() {
+                return ((DTCharactersOfFilmRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new DTCharactersOfFilmRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(DTCharactersOfFilmRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.DTCharactersOfFilmRowChanged != null)) {
+                    this.DTCharactersOfFilmRowChanged(this, new DTCharactersOfFilmRowChangeEvent(((DTCharactersOfFilmRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.DTCharactersOfFilmRowChanging != null)) {
+                    this.DTCharactersOfFilmRowChanging(this, new DTCharactersOfFilmRowChangeEvent(((DTCharactersOfFilmRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.DTCharactersOfFilmRowDeleted != null)) {
+                    this.DTCharactersOfFilmRowDeleted(this, new DTCharactersOfFilmRowChangeEvent(((DTCharactersOfFilmRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.DTCharactersOfFilmRowDeleting != null)) {
+                    this.DTCharactersOfFilmRowDeleting(this, new DTCharactersOfFilmRowChangeEvent(((DTCharactersOfFilmRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemoveDTCharactersOfFilmRow(DTCharactersOfFilmRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                VideoBaseDataSet ds = new VideoBaseDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "DTCharactersOfFilmDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class DIC_CHARACTERRow : global::System.Data.DataRow {
@@ -3941,6 +4261,17 @@ namespace VideoBaseClient {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_FILM"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow DTCharactersOfFilmRow {
+                get {
+                    return ((DTCharactersOfFilmRow)(this.GetParentRow(this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER1"]);
+                }
+            }
         }
         
         /// <summary>
@@ -4197,6 +4528,54 @@ namespace VideoBaseClient {
                 }
                 set {
                     this[this.tableDTFilmsOfGenre.DD_NAMEColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class DTCharactersOfFilmRow : global::System.Data.DataRow {
+            
+            private DTCharactersOfFilmDataTable tableDTCharactersOfFilm;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal DTCharactersOfFilmRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableDTCharactersOfFilm = ((DTCharactersOfFilmDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DCR_NAME {
+                get {
+                    return ((string)(this[this.tableDTCharactersOfFilm.DCR_NAMEColumn]));
+                }
+                set {
+                    this[this.tableDTCharactersOfFilm.DCR_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int DCR_ID {
+                get {
+                    return ((int)(this[this.tableDTCharactersOfFilm.DCR_IDColumn]));
+                }
+                set {
+                    this[this.tableDTCharactersOfFilm.DCR_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public FILM_DIC_CHARACTERRow[] GetFILM_DIC_CHARACTERRows() {
+                if ((this.Table.ChildRelations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER1"] == null)) {
+                    return new FILM_DIC_CHARACTERRow[0];
+                }
+                else {
+                    return ((FILM_DIC_CHARACTERRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FILM_DIC_CHARACTER_DIC_CHARACTER1"])));
                 }
             }
         }
@@ -4527,6 +4906,40 @@ namespace VideoBaseClient {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DTFilmsOfGenreRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public class DTCharactersOfFilmRowChangeEvent : global::System.EventArgs {
+            
+            private DTCharactersOfFilmRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRowChangeEvent(DTCharactersOfFilmRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public DTCharactersOfFilmRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7646,6 +8059,180 @@ WHERE        (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)
                 this.Adapter.SelectCommand.Parameters[3].Value = ((string)(dd_name));
             }
             VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable = new VideoBaseDataSet.DTFilmsOfGenreDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class DTCharactersOfFilmTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public DTCharactersOfFilmTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "DTCharactersOfFilm";
+            tableMapping.ColumnMappings.Add("DCR_NAME", "DCR_NAME");
+            tableMapping.ColumnMappings.Add("DCR_ID", "DCR_ID");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::VideoBaseClient.Properties.Settings.Default.VideoBaseConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT        DIC_CHARACTER.DCR_ID, DIC_CHARACTER.DCR_NAME\r\nFROM            FILM_" +
+                "DIC_CHARACTER INNER JOIN\r\n                         DIC_CHARACTER ON FILM_DIC_CHA" +
+                "RACTER.FDCR_DCR = DIC_CHARACTER.DCR_ID\r\nWHERE        (FILM_DIC_CHARACTER.FDCR_FM" +
+                " = @fm_id)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fm_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FDCR_FM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(VideoBaseDataSet.DTCharactersOfFilmDataTable dataTable, int fm_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(fm_id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual VideoBaseDataSet.DTCharactersOfFilmDataTable GetData(int fm_id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(fm_id));
+            VideoBaseDataSet.DTCharactersOfFilmDataTable dataTable = new VideoBaseDataSet.DTCharactersOfFilmDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

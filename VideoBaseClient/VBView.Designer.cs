@@ -47,8 +47,6 @@
             this.genresTab = new System.Windows.Forms.TabPage();
             this.removeGenreButton = new System.Windows.Forms.Button();
             this.genresView = new System.Windows.Forms.DataGridView();
-            this.dGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dICGENREBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.actorsTab = new System.Windows.Forms.TabPage();
             this.removeActorButton = new System.Windows.Forms.Button();
@@ -73,6 +71,8 @@
             this.dIC_CHARACTERTableAdapter = new VideoBaseClient.VideoBaseDataSetTableAdapters.DIC_CHARACTERTableAdapter();
             this.dIC_DIRECTORTableAdapter = new VideoBaseClient.VideoBaseDataSetTableAdapters.DIC_DIRECTORTableAdapter();
             this.dIC_COUNTRYTableAdapter = new VideoBaseClient.VideoBaseDataSetTableAdapters.DIC_COUNTRYTableAdapter();
+            this.dGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.topToolStrip.SuspendLayout();
             this.tablesTabs.SuspendLayout();
             this.filmsTab.SuspendLayout();
@@ -267,20 +267,6 @@
             this.genresView.TabIndex = 0;
             this.genresView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.genresView_CellDoubleClick);
             this.genresView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.genresView_CellValueChanged);
-            // 
-            // dGIDDataGridViewTextBoxColumn
-            // 
-            this.dGIDDataGridViewTextBoxColumn.DataPropertyName = "DG_ID";
-            this.dGIDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.dGIDDataGridViewTextBoxColumn.Name = "dGIDDataGridViewTextBoxColumn";
-            this.dGIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dGIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dGNAMEDataGridViewTextBoxColumn
-            // 
-            this.dGNAMEDataGridViewTextBoxColumn.DataPropertyName = "DG_NAME";
-            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.dGNAMEDataGridViewTextBoxColumn.Name = "dGNAMEDataGridViewTextBoxColumn";
             // 
             // dICGENREBindingSource
             // 
@@ -490,6 +476,20 @@
             // 
             this.dIC_COUNTRYTableAdapter.ClearBeforeFill = true;
             // 
+            // dGIDDataGridViewTextBoxColumn
+            // 
+            this.dGIDDataGridViewTextBoxColumn.DataPropertyName = "DG_ID";
+            this.dGIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.dGIDDataGridViewTextBoxColumn.Name = "dGIDDataGridViewTextBoxColumn";
+            this.dGIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dGIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dGNAMEDataGridViewTextBoxColumn
+            // 
+            this.dGNAMEDataGridViewTextBoxColumn.DataPropertyName = "DG_NAME";
+            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.dGNAMEDataGridViewTextBoxColumn.Name = "dGNAMEDataGridViewTextBoxColumn";
+            // 
             // VBView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -562,14 +562,14 @@
         private System.Windows.Forms.Button removeActorButton;
         private System.Windows.Forms.Button removeDirectorButton;
         private System.Windows.Forms.Button removeCountryButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dGIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dGNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCRIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCRNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dDIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dDNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dGIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dGNAMEDataGridViewTextBoxColumn;
     }
 }
 
