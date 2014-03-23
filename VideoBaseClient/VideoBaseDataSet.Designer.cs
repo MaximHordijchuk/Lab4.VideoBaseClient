@@ -60,12 +60,6 @@ namespace VideoBaseClient {
         
         private global::System.Data.DataRelation relationFK_FILM_DIC_GENRE_FILM;
         
-        private global::System.Data.DataRelation relationFK_FILM_DIC_CHARACTER_FILM1;
-        
-        private global::System.Data.DataRelation relationFK_FILM_DIC_COUNTRY_FILM1;
-        
-        private global::System.Data.DataRelation relationFK_FILM_DIC_GENRE_FILM1;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -440,9 +434,6 @@ namespace VideoBaseClient {
             this.relationFK_FILM_DIC_DIRETOR_FILM = this.Relations["FK_FILM_DIC_DIRETOR_FILM"];
             this.relationFK_FILM_DIC_GENRE_DIC_GENRE = this.Relations["FK_FILM_DIC_GENRE_DIC_GENRE"];
             this.relationFK_FILM_DIC_GENRE_FILM = this.Relations["FK_FILM_DIC_GENRE_FILM"];
-            this.relationFK_FILM_DIC_CHARACTER_FILM1 = this.Relations["FK_FILM_DIC_CHARACTER_FILM1"];
-            this.relationFK_FILM_DIC_COUNTRY_FILM1 = this.Relations["FK_FILM_DIC_COUNTRY_FILM1"];
-            this.relationFK_FILM_DIC_GENRE_FILM1 = this.Relations["FK_FILM_DIC_GENRE_FILM1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -505,18 +496,6 @@ namespace VideoBaseClient {
                         this.tableFILM.FM_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableFILM_DIC_GENRE.FDG_FMColumn}, false);
             this.Relations.Add(this.relationFK_FILM_DIC_GENRE_FILM);
-            this.relationFK_FILM_DIC_CHARACTER_FILM1 = new global::System.Data.DataRelation("FK_FILM_DIC_CHARACTER_FILM1", new global::System.Data.DataColumn[] {
-                        this.tableDTFilmsOfGenre.FM_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFILM_DIC_CHARACTER.FDCR_FMColumn}, false);
-            this.Relations.Add(this.relationFK_FILM_DIC_CHARACTER_FILM1);
-            this.relationFK_FILM_DIC_COUNTRY_FILM1 = new global::System.Data.DataRelation("FK_FILM_DIC_COUNTRY_FILM1", new global::System.Data.DataColumn[] {
-                        this.tableDTFilmsOfGenre.FM_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFILM_DIC_COUNTRY.FDC_FMColumn}, false);
-            this.Relations.Add(this.relationFK_FILM_DIC_COUNTRY_FILM1);
-            this.relationFK_FILM_DIC_GENRE_FILM1 = new global::System.Data.DataRelation("FK_FILM_DIC_GENRE_FILM1", new global::System.Data.DataColumn[] {
-                        this.tableDTFilmsOfGenre.FM_IDColumn}, new global::System.Data.DataColumn[] {
-                        this.tableFILM_DIC_GENRE.FDG_FMColumn}, false);
-            this.Relations.Add(this.relationFK_FILM_DIC_GENRE_FILM1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3261,6 +3240,10 @@ namespace VideoBaseClient {
             
             private global::System.Data.DataColumn columnDG_NAME;
             
+            private global::System.Data.DataColumn columnDCR_NAME;
+            
+            private global::System.Data.DataColumn columnDD_NAME;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public DTFilmsOfGenreDataTable() {
@@ -3328,6 +3311,22 @@ namespace VideoBaseClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DCR_NAMEColumn {
+                get {
+                    return this.columnDCR_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DD_NAMEColumn {
+                get {
+                    return this.columnDD_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3363,23 +3362,18 @@ namespace VideoBaseClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DTFilmsOfGenreRow AddDTFilmsOfGenreRow(string FM_TITLE, int FM_YEAR, string DG_NAME) {
+            public DTFilmsOfGenreRow AddDTFilmsOfGenreRow(string FM_TITLE, int FM_YEAR, string DG_NAME, string DCR_NAME, string DD_NAME) {
                 DTFilmsOfGenreRow rowDTFilmsOfGenreRow = ((DTFilmsOfGenreRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         FM_TITLE,
                         FM_YEAR,
-                        DG_NAME};
+                        DG_NAME,
+                        DCR_NAME,
+                        DD_NAME};
                 rowDTFilmsOfGenreRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowDTFilmsOfGenreRow);
                 return rowDTFilmsOfGenreRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DTFilmsOfGenreRow FindByFM_ID(int FM_ID) {
-                return ((DTFilmsOfGenreRow)(this.Rows.Find(new object[] {
-                            FM_ID})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3403,6 +3397,8 @@ namespace VideoBaseClient {
                 this.columnFM_TITLE = base.Columns["FM_TITLE"];
                 this.columnFM_YEAR = base.Columns["FM_YEAR"];
                 this.columnDG_NAME = base.Columns["DG_NAME"];
+                this.columnDCR_NAME = base.Columns["DCR_NAME"];
+                this.columnDD_NAME = base.Columns["DD_NAME"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3416,19 +3412,24 @@ namespace VideoBaseClient {
                 base.Columns.Add(this.columnFM_YEAR);
                 this.columnDG_NAME = new global::System.Data.DataColumn("DG_NAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDG_NAME);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnFM_ID}, true));
+                this.columnDCR_NAME = new global::System.Data.DataColumn("DCR_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDCR_NAME);
+                this.columnDD_NAME = new global::System.Data.DataColumn("DD_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDD_NAME);
                 this.columnFM_ID.AutoIncrement = true;
                 this.columnFM_ID.AutoIncrementSeed = -1;
                 this.columnFM_ID.AutoIncrementStep = -1;
                 this.columnFM_ID.AllowDBNull = false;
                 this.columnFM_ID.ReadOnly = true;
-                this.columnFM_ID.Unique = true;
                 this.columnFM_TITLE.AllowDBNull = false;
                 this.columnFM_TITLE.MaxLength = 100;
                 this.columnFM_YEAR.AllowDBNull = false;
                 this.columnDG_NAME.AllowDBNull = false;
                 this.columnDG_NAME.MaxLength = 30;
+                this.columnDCR_NAME.AllowDBNull = false;
+                this.columnDCR_NAME.MaxLength = 100;
+                this.columnDD_NAME.AllowDBNull = false;
+                this.columnDD_NAME.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3940,17 +3941,6 @@ namespace VideoBaseClient {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_FILM"]);
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DTFilmsOfGenreRow DTFilmsOfGenreRow {
-                get {
-                    return ((DTFilmsOfGenreRow)(this.GetParentRow(this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_FILM1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_CHARACTER_FILM1"]);
-                }
-            }
         }
         
         /// <summary>
@@ -4008,17 +3998,6 @@ namespace VideoBaseClient {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_COUNTRY_FILM"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DTFilmsOfGenreRow DTFilmsOfGenreRow {
-                get {
-                    return ((DTFilmsOfGenreRow)(this.GetParentRow(this.Table.ParentRelations["FK_FILM_DIC_COUNTRY_FILM1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_COUNTRY_FILM1"]);
                 }
             }
         }
@@ -4139,17 +4118,6 @@ namespace VideoBaseClient {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_GENRE_FILM"]);
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DTFilmsOfGenreRow DTFilmsOfGenreRow {
-                get {
-                    return ((DTFilmsOfGenreRow)(this.GetParentRow(this.Table.ParentRelations["FK_FILM_DIC_GENRE_FILM1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_FILM_DIC_GENRE_FILM1"]);
-                }
-            }
         }
         
         /// <summary>
@@ -4212,34 +4180,23 @@ namespace VideoBaseClient {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FILM_DIC_CHARACTERRow[] GetFILM_DIC_CHARACTERRows() {
-                if ((this.Table.ChildRelations["FK_FILM_DIC_CHARACTER_FILM1"] == null)) {
-                    return new FILM_DIC_CHARACTERRow[0];
+            public string DCR_NAME {
+                get {
+                    return ((string)(this[this.tableDTFilmsOfGenre.DCR_NAMEColumn]));
                 }
-                else {
-                    return ((FILM_DIC_CHARACTERRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FILM_DIC_CHARACTER_FILM1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FILM_DIC_COUNTRYRow[] GetFILM_DIC_COUNTRYRows() {
-                if ((this.Table.ChildRelations["FK_FILM_DIC_COUNTRY_FILM1"] == null)) {
-                    return new FILM_DIC_COUNTRYRow[0];
-                }
-                else {
-                    return ((FILM_DIC_COUNTRYRow[])(base.GetChildRows(this.Table.ChildRelations["FK_FILM_DIC_COUNTRY_FILM1"])));
+                set {
+                    this[this.tableDTFilmsOfGenre.DCR_NAMEColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FILM_DIC_GENRERow[] GetFILM_DIC_GENRERows() {
-                if ((this.Table.ChildRelations["FK_FILM_DIC_GENRE_FILM1"] == null)) {
-                    return new FILM_DIC_GENRERow[0];
+            public string DD_NAME {
+                get {
+                    return ((string)(this[this.tableDTFilmsOfGenre.DD_NAMEColumn]));
                 }
-                else {
-                    return ((FILM_DIC_GENRERow[])(base.GetChildRows(this.Table.ChildRelations["FK_FILM_DIC_GENRE_FILM1"])));
+                set {
+                    this[this.tableDTFilmsOfGenre.DD_NAMEColumn] = value;
                 }
             }
         }
@@ -7558,6 +7515,8 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
             tableMapping.ColumnMappings.Add("FM_TITLE", "FM_TITLE");
             tableMapping.ColumnMappings.Add("FM_YEAR", "FM_YEAR");
             tableMapping.ColumnMappings.Add("DG_NAME", "DG_NAME");
+            tableMapping.ColumnMappings.Add("DCR_NAME", "DCR_NAME");
+            tableMapping.ColumnMappings.Add("DD_NAME", "DD_NAME");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -7574,39 +7533,42 @@ SELECT FDCR_FM, FDCR_DCR FROM FILM_DIC_CHARACTER WHERE (FDCR_DCR = @FDCR_DCR) AN
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT FILM.FM_ID, FILM.FM_TITLE, FILM.FM_YEAR, DIC_GENRE.DG_NAME
-FROM FILM INNER JOIN FILM_DIC_GENRE
-ON FILM_DIC_GENRE.FDG_FM = FILM.FM_ID INNER JOIN DIC_GENRE
-ON DIC_GENRE.DG_ID = FILM_DIC_GENRE.FDG_DG
-WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
+            this._commandCollection[0].CommandText = @"SELECT        FILM.FM_ID, FILM.FM_TITLE, FILM.FM_YEAR, DIC_GENRE.DG_NAME, DIC_CHARACTER.DCR_NAME, DIC_DIRECTOR.DD_NAME
+FROM            FILM INNER JOIN
+                         FILM_DIC_GENRE ON FILM_DIC_GENRE.FDG_FM = FILM.FM_ID INNER JOIN
+                         DIC_GENRE ON DIC_GENRE.DG_ID = FILM_DIC_GENRE.FDG_DG INNER JOIN
+                         FILM_DIC_CHARACTER ON FILM.FM_ID = FILM_DIC_CHARACTER.FDCR_FM INNER JOIN
+                         DIC_CHARACTER ON FILM_DIC_CHARACTER.FDCR_DCR = DIC_CHARACTER.DCR_ID INNER JOIN
+                         FILM_DIC_DIRECTOR ON FILM.FM_ID = FILM_DIC_DIRECTOR.FDD_FM INNER JOIN
+                         DIC_DIRECTOR ON FILM_DIC_DIRECTOR.FDD_DD = DIC_DIRECTOR.DD_ID
+WHERE        (FILM_DIC_GENRE.FDG_DG = @dg_id)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dg_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FDG_DG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fm_title", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "FM_TITLE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT FILM.FM_ID, FILM.FM_TITLE, FILM.FM_YEAR, DIC_GENRE.DG_NAME
-FROM FILM INNER JOIN FILM_DIC_GENRE
-ON FILM_DIC_GENRE.FDG_FM = FILM.FM_ID INNER JOIN DIC_GENRE
-ON DIC_GENRE.DG_ID = FILM_DIC_GENRE.FDG_DG
-WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
+            this._commandCollection[1].CommandText = @"SELECT        FILM.FM_ID, FILM.FM_TITLE, FILM.FM_YEAR, DIC_GENRE.DG_NAME, DIC_CHARACTER.DCR_NAME, DIC_DIRECTOR.DD_NAME
+FROM            FILM INNER JOIN
+                         FILM_DIC_GENRE ON FILM_DIC_GENRE.FDG_FM = FILM.FM_ID INNER JOIN
+                         DIC_GENRE ON DIC_GENRE.DG_ID = FILM_DIC_GENRE.FDG_DG INNER JOIN
+                         FILM_DIC_CHARACTER ON FILM.FM_ID = FILM_DIC_CHARACTER.FDCR_FM INNER JOIN
+                         DIC_CHARACTER ON FILM_DIC_CHARACTER.FDCR_DCR = DIC_CHARACTER.DCR_ID INNER JOIN
+                         FILM_DIC_DIRECTOR ON FILM.FM_ID = FILM_DIC_DIRECTOR.FDD_FM INNER JOIN
+                         DIC_DIRECTOR ON FILM_DIC_DIRECTOR.FDD_DD = DIC_DIRECTOR.DD_ID
+WHERE        (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title) AND (DIC_CHARACTER.DCR_NAME LIKE @dcr_name) AND (DIC_DIRECTOR.DD_NAME LIKE @dd_name)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dg_id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "FDG_DG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fm_title", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "FM_TITLE", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dcr_name", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "DCR_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dd_name", global::System.Data.SqlDbType.NVarChar, 100, global::System.Data.ParameterDirection.Input, 0, 0, "DD_NAME", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable, int dg_id, string fm_title) {
+        public virtual int Fill(VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable, int dg_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(dg_id));
-            if ((fm_title == null)) {
-                throw new global::System.ArgumentNullException("fm_title");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fm_title));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -7618,15 +7580,9 @@ WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual VideoBaseDataSet.DTFilmsOfGenreDataTable GetData(int dg_id, string fm_title) {
+        public virtual VideoBaseDataSet.DTFilmsOfGenreDataTable GetData(int dg_id) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(dg_id));
-            if ((fm_title == null)) {
-                throw new global::System.ArgumentNullException("fm_title");
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fm_title));
-            }
             VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable = new VideoBaseDataSet.DTFilmsOfGenreDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -7636,7 +7592,7 @@ WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByName(VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable, int dg_id, string fm_title) {
+        public virtual int FillByFilmTitleActorDirector(VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable, int dg_id, string fm_title, string dcr_name, string dd_name) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(dg_id));
             if ((fm_title == null)) {
@@ -7644,6 +7600,18 @@ WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fm_title));
+            }
+            if ((dcr_name == null)) {
+                throw new global::System.ArgumentNullException("dcr_name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(dcr_name));
+            }
+            if ((dd_name == null)) {
+                throw new global::System.ArgumentNullException("dd_name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(dd_name));
             }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7656,7 +7624,7 @@ WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual VideoBaseDataSet.DTFilmsOfGenreDataTable GetDataByName(int dg_id, string fm_title) {
+        public virtual VideoBaseDataSet.DTFilmsOfGenreDataTable GetDataByFilmTitleActorDirector(int dg_id, string fm_title, string dcr_name, string dd_name) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             this.Adapter.SelectCommand.Parameters[0].Value = ((int)(dg_id));
             if ((fm_title == null)) {
@@ -7664,6 +7632,18 @@ WHERE (FILM_DIC_GENRE.FDG_DG = @dg_id) AND (FILM.FM_TITLE LIKE @fm_title)";
             }
             else {
                 this.Adapter.SelectCommand.Parameters[1].Value = ((string)(fm_title));
+            }
+            if ((dcr_name == null)) {
+                throw new global::System.ArgumentNullException("dcr_name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[2].Value = ((string)(dcr_name));
+            }
+            if ((dd_name == null)) {
+                throw new global::System.ArgumentNullException("dd_name");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[3].Value = ((string)(dd_name));
             }
             VideoBaseDataSet.DTFilmsOfGenreDataTable dataTable = new VideoBaseDataSet.DTFilmsOfGenreDataTable();
             this.Adapter.Fill(dataTable);

@@ -36,22 +36,6 @@
             this.filmsTab = new System.Windows.Forms.TabPage();
             this.removeFilmButton = new System.Windows.Forms.Button();
             this.filmsView = new System.Windows.Forms.DataGridView();
-            this.genresTab = new System.Windows.Forms.TabPage();
-            this.removeGenreButton = new System.Windows.Forms.Button();
-            this.genresView = new System.Windows.Forms.DataGridView();
-            this.dGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.actorsTab = new System.Windows.Forms.TabPage();
-            this.removeActorButton = new System.Windows.Forms.Button();
-            this.actorsView = new System.Windows.Forms.DataGridView();
-            this.dCRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.directorsTab = new System.Windows.Forms.TabPage();
-            this.removeDirectorButton = new System.Windows.Forms.Button();
-            this.directorsView = new System.Windows.Forms.DataGridView();
-            this.dDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countriesTab = new System.Windows.Forms.TabPage();
-            this.removeCountryButton = new System.Windows.Forms.Button();
-            this.countriesView = new System.Windows.Forms.DataGridView();
-            this.dCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMTITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMYEARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMLENGTHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,12 +44,28 @@
             this.fMANOTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fILMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.videoBaseDataSet = new VideoBaseClient.VideoBaseDataSet();
+            this.genresTab = new System.Windows.Forms.TabPage();
+            this.removeGenreButton = new System.Windows.Forms.Button();
+            this.genresView = new System.Windows.Forms.DataGridView();
+            this.dGIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dGNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dICGENREBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.actorsTab = new System.Windows.Forms.TabPage();
+            this.removeActorButton = new System.Windows.Forms.Button();
+            this.actorsView = new System.Windows.Forms.DataGridView();
+            this.dCRIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dCRNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dICCHARACTERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.directorsTab = new System.Windows.Forms.TabPage();
+            this.removeDirectorButton = new System.Windows.Forms.Button();
+            this.directorsView = new System.Windows.Forms.DataGridView();
+            this.dDIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dDNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dICDIRECTORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countriesTab = new System.Windows.Forms.TabPage();
+            this.removeCountryButton = new System.Windows.Forms.Button();
+            this.countriesView = new System.Windows.Forms.DataGridView();
+            this.dCIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dCNAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dICCOUNTRYBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fILMTableAdapter = new VideoBaseClient.VideoBaseDataSetTableAdapters.FILMTableAdapter();
@@ -77,19 +77,19 @@
             this.tablesTabs.SuspendLayout();
             this.filmsTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.filmsView)).BeginInit();
-            this.genresTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.genresView)).BeginInit();
-            this.actorsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.actorsView)).BeginInit();
-            this.directorsTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.directorsView)).BeginInit();
-            this.countriesTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.countriesView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fILMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBaseDataSet)).BeginInit();
+            this.genresTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.genresView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICGENREBindingSource)).BeginInit();
+            this.actorsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.actorsView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICCHARACTERBindingSource)).BeginInit();
+            this.directorsTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.directorsView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICDIRECTORBindingSource)).BeginInit();
+            this.countriesTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICCOUNTRYBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,7 +101,7 @@
             this.topToolStrip.Name = "topToolStrip";
             this.topToolStrip.Size = new System.Drawing.Size(660, 25);
             this.topToolStrip.TabIndex = 0;
-            this.topToolStrip.Text = "toolStrip1";
+            this.topToolStrip.Text = "Інструменти";
             // 
             // toolsSaveButton
             // 
@@ -177,6 +177,52 @@
             this.filmsView.TabIndex = 0;
             this.filmsView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmsView_CellValueChanged);
             // 
+            // fMTITLEDataGridViewTextBoxColumn
+            // 
+            this.fMTITLEDataGridViewTextBoxColumn.DataPropertyName = "FM_TITLE";
+            this.fMTITLEDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.fMTITLEDataGridViewTextBoxColumn.Name = "fMTITLEDataGridViewTextBoxColumn";
+            // 
+            // fMYEARDataGridViewTextBoxColumn
+            // 
+            this.fMYEARDataGridViewTextBoxColumn.DataPropertyName = "FM_YEAR";
+            this.fMYEARDataGridViewTextBoxColumn.HeaderText = "Рік";
+            this.fMYEARDataGridViewTextBoxColumn.Name = "fMYEARDataGridViewTextBoxColumn";
+            // 
+            // fMLENGTHDataGridViewTextBoxColumn
+            // 
+            this.fMLENGTHDataGridViewTextBoxColumn.DataPropertyName = "FM_LENGTH";
+            this.fMLENGTHDataGridViewTextBoxColumn.HeaderText = "Тривалість";
+            this.fMLENGTHDataGridViewTextBoxColumn.Name = "fMLENGTHDataGridViewTextBoxColumn";
+            // 
+            // fMIMDBRATEDataGridViewTextBoxColumn
+            // 
+            this.fMIMDBRATEDataGridViewTextBoxColumn.DataPropertyName = "FM_IMDB_RATE";
+            this.fMIMDBRATEDataGridViewTextBoxColumn.HeaderText = "Рейтинг IMDB";
+            this.fMIMDBRATEDataGridViewTextBoxColumn.Name = "fMIMDBRATEDataGridViewTextBoxColumn";
+            // 
+            // fMKPRATEDataGridViewTextBoxColumn
+            // 
+            this.fMKPRATEDataGridViewTextBoxColumn.DataPropertyName = "FM_KP_RATE";
+            this.fMKPRATEDataGridViewTextBoxColumn.HeaderText = "Рейтинг Кінопошуку";
+            this.fMKPRATEDataGridViewTextBoxColumn.Name = "fMKPRATEDataGridViewTextBoxColumn";
+            // 
+            // fMANOTDataGridViewTextBoxColumn
+            // 
+            this.fMANOTDataGridViewTextBoxColumn.DataPropertyName = "FM_ANOT";
+            this.fMANOTDataGridViewTextBoxColumn.HeaderText = "Анотація";
+            this.fMANOTDataGridViewTextBoxColumn.Name = "fMANOTDataGridViewTextBoxColumn";
+            // 
+            // fILMBindingSource
+            // 
+            this.fILMBindingSource.DataMember = "FILM";
+            this.fILMBindingSource.DataSource = this.videoBaseDataSet;
+            // 
+            // videoBaseDataSet
+            // 
+            this.videoBaseDataSet.DataSetName = "VideoBaseDataSet";
+            this.videoBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // genresTab
             // 
             this.genresTab.Controls.Add(this.removeGenreButton);
@@ -230,6 +276,17 @@
             this.dGIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dGIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dGNAMEDataGridViewTextBoxColumn
+            // 
+            this.dGNAMEDataGridViewTextBoxColumn.DataPropertyName = "DG_NAME";
+            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.dGNAMEDataGridViewTextBoxColumn.Name = "dGNAMEDataGridViewTextBoxColumn";
+            // 
+            // dICGENREBindingSource
+            // 
+            this.dICGENREBindingSource.DataMember = "DIC_GENRE";
+            this.dICGENREBindingSource.DataSource = this.videoBaseDataSet;
+            // 
             // actorsTab
             // 
             this.actorsTab.Controls.Add(this.removeActorButton);
@@ -279,6 +336,17 @@
             this.dCRIDDataGridViewTextBoxColumn.Name = "dCRIDDataGridViewTextBoxColumn";
             this.dCRIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dCRIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // dCRNAMEDataGridViewTextBoxColumn
+            // 
+            this.dCRNAMEDataGridViewTextBoxColumn.DataPropertyName = "DCR_NAME";
+            this.dCRNAMEDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.dCRNAMEDataGridViewTextBoxColumn.Name = "dCRNAMEDataGridViewTextBoxColumn";
+            // 
+            // dICCHARACTERBindingSource
+            // 
+            this.dICCHARACTERBindingSource.DataMember = "DIC_CHARACTER";
+            this.dICCHARACTERBindingSource.DataSource = this.videoBaseDataSet;
             // 
             // directorsTab
             // 
@@ -330,6 +398,17 @@
             this.dDIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dDIDDataGridViewTextBoxColumn.Visible = false;
             // 
+            // dDNAMEDataGridViewTextBoxColumn
+            // 
+            this.dDNAMEDataGridViewTextBoxColumn.DataPropertyName = "DD_NAME";
+            this.dDNAMEDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
+            this.dDNAMEDataGridViewTextBoxColumn.Name = "dDNAMEDataGridViewTextBoxColumn";
+            // 
+            // dICDIRECTORBindingSource
+            // 
+            this.dICDIRECTORBindingSource.DataMember = "DIC_DIRECTOR";
+            this.dICDIRECTORBindingSource.DataSource = this.videoBaseDataSet;
+            // 
             // countriesTab
             // 
             this.countriesTab.Controls.Add(this.removeCountryButton);
@@ -380,85 +459,6 @@
             this.dCIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dCIDDataGridViewTextBoxColumn.Visible = false;
             // 
-            // fMTITLEDataGridViewTextBoxColumn
-            // 
-            this.fMTITLEDataGridViewTextBoxColumn.DataPropertyName = "FM_TITLE";
-            this.fMTITLEDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.fMTITLEDataGridViewTextBoxColumn.Name = "fMTITLEDataGridViewTextBoxColumn";
-            // 
-            // fMYEARDataGridViewTextBoxColumn
-            // 
-            this.fMYEARDataGridViewTextBoxColumn.DataPropertyName = "FM_YEAR";
-            this.fMYEARDataGridViewTextBoxColumn.HeaderText = "Рік";
-            this.fMYEARDataGridViewTextBoxColumn.Name = "fMYEARDataGridViewTextBoxColumn";
-            // 
-            // fMLENGTHDataGridViewTextBoxColumn
-            // 
-            this.fMLENGTHDataGridViewTextBoxColumn.DataPropertyName = "FM_LENGTH";
-            this.fMLENGTHDataGridViewTextBoxColumn.HeaderText = "Тривалість";
-            this.fMLENGTHDataGridViewTextBoxColumn.Name = "fMLENGTHDataGridViewTextBoxColumn";
-            // 
-            // fMIMDBRATEDataGridViewTextBoxColumn
-            // 
-            this.fMIMDBRATEDataGridViewTextBoxColumn.DataPropertyName = "FM_IMDB_RATE";
-            this.fMIMDBRATEDataGridViewTextBoxColumn.HeaderText = "Рейтинг IMDB";
-            this.fMIMDBRATEDataGridViewTextBoxColumn.Name = "fMIMDBRATEDataGridViewTextBoxColumn";
-            // 
-            // fMKPRATEDataGridViewTextBoxColumn
-            // 
-            this.fMKPRATEDataGridViewTextBoxColumn.DataPropertyName = "FM_KP_RATE";
-            this.fMKPRATEDataGridViewTextBoxColumn.HeaderText = "Рейтинг Кінопошуку";
-            this.fMKPRATEDataGridViewTextBoxColumn.Name = "fMKPRATEDataGridViewTextBoxColumn";
-            // 
-            // fMANOTDataGridViewTextBoxColumn
-            // 
-            this.fMANOTDataGridViewTextBoxColumn.DataPropertyName = "FM_ANOT";
-            this.fMANOTDataGridViewTextBoxColumn.HeaderText = "Анотація";
-            this.fMANOTDataGridViewTextBoxColumn.Name = "fMANOTDataGridViewTextBoxColumn";
-            // 
-            // fILMBindingSource
-            // 
-            this.fILMBindingSource.DataMember = "FILM";
-            this.fILMBindingSource.DataSource = this.videoBaseDataSet;
-            // 
-            // videoBaseDataSet
-            // 
-            this.videoBaseDataSet.DataSetName = "VideoBaseDataSet";
-            this.videoBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dGNAMEDataGridViewTextBoxColumn
-            // 
-            this.dGNAMEDataGridViewTextBoxColumn.DataPropertyName = "DG_NAME";
-            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назва";
-            this.dGNAMEDataGridViewTextBoxColumn.Name = "dGNAMEDataGridViewTextBoxColumn";
-            // 
-            // dICGENREBindingSource
-            // 
-            this.dICGENREBindingSource.DataMember = "DIC_GENRE";
-            this.dICGENREBindingSource.DataSource = this.videoBaseDataSet;
-            // 
-            // dCRNAMEDataGridViewTextBoxColumn
-            // 
-            this.dCRNAMEDataGridViewTextBoxColumn.DataPropertyName = "DCR_NAME";
-            this.dCRNAMEDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.dCRNAMEDataGridViewTextBoxColumn.Name = "dCRNAMEDataGridViewTextBoxColumn";
-            // 
-            // dICCHARACTERBindingSource
-            // 
-            this.dICCHARACTERBindingSource.DataMember = "DIC_CHARACTER";
-            this.dICCHARACTERBindingSource.DataSource = this.videoBaseDataSet;
-            // 
-            // dDNAMEDataGridViewTextBoxColumn
-            // 
-            this.dDNAMEDataGridViewTextBoxColumn.DataPropertyName = "DD_NAME";
-            this.dDNAMEDataGridViewTextBoxColumn.HeaderText = "Ім\'я";
-            this.dDNAMEDataGridViewTextBoxColumn.Name = "dDNAMEDataGridViewTextBoxColumn";
-            // 
-            // dICDIRECTORBindingSource
-            // 
-            this.dICDIRECTORBindingSource.DataMember = "DIC_DIRECTOR";
-            this.dICDIRECTORBindingSource.DataSource = this.videoBaseDataSet;
-            // 
             // dCNAMEDataGridViewTextBoxColumn
             // 
             this.dCNAMEDataGridViewTextBoxColumn.DataPropertyName = "DC_NAME";
@@ -506,19 +506,19 @@
             this.tablesTabs.ResumeLayout(false);
             this.filmsTab.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.filmsView)).EndInit();
-            this.genresTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.genresView)).EndInit();
-            this.actorsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.actorsView)).EndInit();
-            this.directorsTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.directorsView)).EndInit();
-            this.countriesTab.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.countriesView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fILMBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBaseDataSet)).EndInit();
+            this.genresTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.genresView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICGENREBindingSource)).EndInit();
+            this.actorsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.actorsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICCHARACTERBindingSource)).EndInit();
+            this.directorsTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.directorsView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICDIRECTORBindingSource)).EndInit();
+            this.countriesTab.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.countriesView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dICCOUNTRYBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

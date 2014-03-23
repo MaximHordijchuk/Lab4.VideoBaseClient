@@ -137,7 +137,7 @@ namespace VideoBaseClient
                     filmsDialogView.ShowDialog(this);
                     filmsDialogView.Dispose();
                 }
-                catch
+                catch (Exception ex)
                 {
                     MessageBox.Show("Помилка переходу до списку фільмів", "Перехід до списку фільмів");
                 }

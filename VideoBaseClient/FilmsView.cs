@@ -28,8 +28,20 @@ namespace VideoBaseClient
 
         private void findFilms()
         {
-            string findName = "%" + filmTitle.Text + "%";
-            dTFilmsOfGenreTableAdapter.FillByName(videoBaseDataSet.DTFilmsOfGenre, _genreId, _genreName);
+            string filmTitle = "%" + tbFilmTitle.Text + "%";
+            string actorName = "%" + tbActorName.Text + "%";
+            string directorName = "%" + tbDirectorName.Text + "%";
+            dTFilmsOfGenreTableAdapter.FillByFilmTitleActorDirector(
+                videoBaseDataSet.DTFilmsOfGenre,
+                _genreId,
+                filmTitle,
+                actorName,
+                directorName);
+        }
+
+        private void toolStripSearch_Click(object sender, EventArgs e)
+        {
+            findFilms();
         }
     }
 }
