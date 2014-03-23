@@ -22,7 +22,7 @@ namespace VideoBaseClient
             Text = string.Concat(Text, " ", genreName);
             _genreId = genreId;
             _genreName = genreName;
-            findFilms();
+            dTFilmsOfGenreTableAdapter.Fill(videoBaseDataSet.DTFilmsOfGenre, genreId);
             _changed = false;
         }
 
@@ -42,6 +42,20 @@ namespace VideoBaseClient
         private void toolStripSearch_Click(object sender, EventArgs e)
         {
             findFilms();
+        }
+
+        private void filmView_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = 0;
+            try
+            {
+                id = (int) filmView.CurrentRow.Cells["fMIDDataGridViewTextBoxColumn"].Value;
+                dTCharactersOfFilmTableAdapter.Fill(videoBaseDataSet.DTCharactersOfFilm, id);
+            }
+            catch
+            {
+                MessageBox.Show("Помилка виведення списку акторів!", "Помилка");
+            }
         }
     }
 }
