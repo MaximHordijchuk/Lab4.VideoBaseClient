@@ -36,6 +36,7 @@
             this.filmsTab = new System.Windows.Forms.TabPage();
             this.removeFilmButton = new System.Windows.Forms.Button();
             this.filmsView = new System.Windows.Forms.DataGridView();
+            this.fMIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMTITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMYEARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fMLENGTHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -164,6 +165,7 @@
             this.filmsView.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.filmsView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.filmsView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.fMIDDataGridViewTextBoxColumn,
             this.fMTITLEDataGridViewTextBoxColumn,
             this.fMYEARDataGridViewTextBoxColumn,
             this.fMLENGTHDataGridViewTextBoxColumn,
@@ -176,6 +178,14 @@
             this.filmsView.Size = new System.Drawing.Size(622, 275);
             this.filmsView.TabIndex = 0;
             this.filmsView.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.filmsView_CellValueChanged);
+            // 
+            // fMIDDataGridViewTextBoxColumn
+            // 
+            this.fMIDDataGridViewTextBoxColumn.DataPropertyName = "FM_ID";
+            this.fMIDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.fMIDDataGridViewTextBoxColumn.Name = "fMIDDataGridViewTextBoxColumn";
+            this.fMIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fMIDDataGridViewTextBoxColumn.Visible = false;
             // 
             // fMTITLEDataGridViewTextBoxColumn
             // 
@@ -483,11 +493,12 @@
             this.dGIDDataGridViewTextBoxColumn.Name = "dGIDDataGridViewTextBoxColumn";
             this.dGIDDataGridViewTextBoxColumn.ReadOnly = true;
             this.dGIDDataGridViewTextBoxColumn.Visible = false;
+            this.dGIDDataGridViewTextBoxColumn.Width = 5;
             // 
             // dGNAMEDataGridViewTextBoxColumn
             // 
             this.dGNAMEDataGridViewTextBoxColumn.DataPropertyName = "DG_NAME";
-            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назва";
+            this.dGNAMEDataGridViewTextBoxColumn.HeaderText = "Назв";
             this.dGNAMEDataGridViewTextBoxColumn.Name = "dGNAMEDataGridViewTextBoxColumn";
             // 
             // VBView
@@ -551,12 +562,6 @@
         private VideoBaseDataSetTableAdapters.DIC_DIRECTORTableAdapter dIC_DIRECTORTableAdapter;
         private System.Windows.Forms.BindingSource dICCOUNTRYBindingSource;
         private VideoBaseDataSetTableAdapters.DIC_COUNTRYTableAdapter dIC_COUNTRYTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMTITLEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMYEARDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMLENGTHDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMIMDBRATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMKPRATEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fMANOTDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button removeFilmButton;
         private System.Windows.Forms.Button removeGenreButton;
         private System.Windows.Forms.Button removeActorButton;
@@ -568,6 +573,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dDNAMEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dCNAMEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMTITLEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMYEARDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMLENGTHDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMIMDBRATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMKPRATEDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fMANOTDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dGIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dGNAMEDataGridViewTextBoxColumn;
     }

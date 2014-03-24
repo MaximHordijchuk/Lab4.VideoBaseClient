@@ -48,7 +48,29 @@ namespace VideoBaseClient
 
         private void removeFilmButton_Click(object sender, EventArgs e)
         {
-            fILMBindingSource.RemoveCurrent();
+            try
+            {
+                int id = (int)filmsView.CurrentRow.Cells["fMIDDataGridViewTextBoxColumn"].Value;
+                var queriesTableAdapter = new QueriesTableAdapter();
+                int? countriesCount = queriesTableAdapter.SQCountFM_IDInFILM_DIC_COUNTRY(id);
+                int? genresCount = queriesTableAdapter.SQCountFM_IDInFILM_DIC_GENRE(id);
+                int? charactersCount = queriesTableAdapter.SQCountFM_IDInFILM_DIC_CHARACTER(id);
+                int? directorsCount = queriesTableAdapter.SQCountFM_IDInFILM_DIC_DIRECTOR(id);
+                if (genresCount == 0 && countriesCount == 0 && charactersCount == 0 && directorsCount == 0)
+                    fILMBindingSource.RemoveCurrent();
+                else if (genresCount != 0)
+                    MessageBox.Show("Видалення неможливе! До фільму прив'язані жанри!", "Помилка видалення фільму");
+                else if (countriesCount != 0)
+                    MessageBox.Show("Видалення неможливе! До фільму прив'язані країни!", "Помилка видалення фільму");
+                else if (charactersCount != 0)
+                    MessageBox.Show("Видалення неможливе! До фільму прив'язані актори!", "Помилка видалення фільму");
+                else if (directorsCount != 0)
+                    MessageBox.Show("Видалення неможливе! До фільму прив'язані режисери!", "Помилка видалення фільму");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Помилка видалення жанру", "Помилка видалення жанру");
+            }
         }
 
         private void removeGenreButton_Click(object sender, EventArgs e)

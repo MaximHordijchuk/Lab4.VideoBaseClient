@@ -118,7 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <metadata name="dTFilmsOfGenreBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>624, 52</value>
+  </metadata>
+  <metadata name="videoBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>475, 52</value>
   </metadata>
   <metadata name="topToolStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>596, 17</value>
@@ -142,26 +145,23 @@
         RRicOHOu7uC1R+cuvf2z+sGnv8uef/mz9tb9+5eu37w55////4xQZdjBgQMHVHddfnR29+O/yw4/+7vs
         zOu/y66//7vswZe/y+49f3vqyZMn4VCl2MGhQ4dSTz7/uXUfUPMOoCEgg44A2effgA1afvLM+TlQpdjB
         tm3bIh68/3EcpOHYy7/Ldj3+u3z7o18r9j79u/zYi7/LN27eMRuqFDvo7+8XeAgEt19/3nLx+Ze1Rx58
-        WL/r7of1W259Xrfn8v3L6enpYVCluMGUKVOcV6xc+fvq3bt3bzx7e/b2q4/nH71+96Kurm4hUJoHogoH
+        WL/r7of1W259Xrfn8v3L6enpYVCluMGUKVOclyxd+vvq3bt3bzx7e/b2q4/nH71+96Kurm4hUJoHogoH
         WLVqFdv+/fvnWFpaJoWGhlakpqbOz83NnWxtbR0IlJYCYm6wQmwgKyvLf968eb9aWlpWAbm8QCwKxGJA
         LAGlQWLYo1FOTk4RaOtbNja2/0C6ASgkDsQsQMwExMxQGjuQkZHhNDMzOycoKPgfyN0CxJJAzAmSIwro
-        6+svVFRUBGm+C8TKQMwGEicKKCsrW+rp6f1nZ2f/BuTaATHI2SQBRl5e3iSg3wOAbJBf6QUYGADh9NKn
-        HjBHlwAAAABJRU5ErkJggg==
+        6+svVFRUBGm+C8TKQMwGEicKKCsrW+rp6f1nZ2f/BuTaATHI2SQBRl5e3iSg3wOAbJBf6QUYGADH8NKb
+        1NTWBAAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="dTCharactersOfFilmBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
-  </metadata>
-  <metadata name="videoBaseDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>235, 17</value>
+    <value>25, 17</value>
   </metadata>
   <metadata name="dTFilmsOfGenreTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>384, 17</value>
-  </metadata>
-  <metadata name="dTFilmsOfGenreBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+    <value>17, 91</value>
   </metadata>
   <metadata name="dTCharactersOfFilmTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>243, 52</value>
+    <value>262, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>91</value>
   </metadata>
 </root>
